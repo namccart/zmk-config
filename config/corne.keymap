@@ -46,6 +46,15 @@
                 , <&macro_release &kp RCTRL &kp RGUI>
                 ;
         };
+        windown: windown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RCTRL &kp RGUI>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp RCTRL &kp RGUI>
+                ;
+        };
         winleft: winleft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
