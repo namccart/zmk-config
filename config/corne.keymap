@@ -64,7 +64,7 @@
                 , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
-        wkspcdown: wkspdown {
+        wkspcdown: wkspcdown {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -125,7 +125,7 @@
                 nav_layer {
                         bindings = <
    &kp F1  &wkspcup  &winup  &kp wkspcdown  &kp F7   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS
-   &kp F2 &winleft &windown &winright &kp F8   &kp PG_DOWN  &kp LEFT  &hm RCTRL DOWN  &hm RALT RIGHT &lock
+   &kp F2 &winleft &windown &winright &kp F8   &kp PG_DN  &kp LEFT  &hm RCTRL DOWN  &hm RALT RIGHT &lock
    &kp F3  &kp F4 &kp F5 &kp F6 &kp F9   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE
                   &kp F10  &kp F11  &kp F12   &tog NAV  &trans  &kp LGUI
                         >;
