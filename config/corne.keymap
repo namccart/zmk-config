@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -17,7 +17,6 @@
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
@@ -33,61 +32,61 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RGUI>
+                = <&macro_press &kp RCTRL &kp RGUI>
                 , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp RCTL &kp RGUI>
+                , <&macro_release &kp RCTRL &kp RGUI>
                 ;
         };
         winup: winup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RGUI>
+                = <&macro_press &kp RCTRL &kp RGUI>
                 , <&macro_tap &kp UP>
-                , <&macro_release &kp RCTL &kp RGUI>
+                , <&macro_release &kp RCTRL &kp RGUI>
                 ;
         };
         winleft: winleft {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RGUI>
+                = <&macro_press &kp RCTRL &kp RGUI>
                 , <&macro_tap &kp LEFT>
-                , <&macro_release &kp RCTL &kp RGUI>
+                , <&macro_release &kp RCTRL &kp RGUI>
                 ;
         };
         wkspcup: wkspcup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RALT>
+                = <&macro_press &kp RCTRL &kp RALT>
                 , <&macro_tap &kp UP>
-                , <&macro_release &kp RCTL &kp RALT>
+                , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
         wkspcdown: wkspdown {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RALT>
+                = <&macro_press &kp RCTRL &kp RALT>
                 , <&macro_tap &kp DOWN>
-                , <&macro_release &kp RCTL &kp RALT>
+                , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
         hyper: hyper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RALT &kp RGUI &kp RSHFT>
-                , <&macro_release &kp RCTL &kp RALT &kp RGUI &kp RSHFT>
+                = <&macro_press &kp RCTRL &kp RALT &kp RGUI &kp RSHFT>
+                , <&macro_release &kp RCTRL &kp RALT &kp RGUI &kp RSHFT>
                 ;
         };
         meh: meh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp RCTL &kp RALT>
-                , <&macro_release &kp RCTL &kp RALT>
+                = <&macro_press &kp RCTRL &kp RALT>
+                , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
         lock: lock {
@@ -109,7 +108,7 @@
                 base_layer {
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &kp P
-   &kp A &hm LALT S &hm LCTL D &kp F &kp G   &kp H &kp J  &hm RCTL K  &hm RALT L   &kp SEMI
+   &kp A &hm LALT S &hm LCTRL D &kp F &kp G   &kp H &kp J  &hm RCTRL K  &hm RALT L   &kp SEMI
    &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH
                   &lt SYMB TAB &kp BSPC &lt NAV DEL   &lt NAV ESC &kp SPACE &lt SYMB RET 
                         >;
@@ -117,7 +116,7 @@
                 symb_layer {
                         bindings = <
    &kp EXCL  &kp AT  &kp LBRC  &kp RBRC  &kp AMPS   &kp FSLH  &kp N7  &kp N8  &kp N9 &kp MINUS
-   &kp HASH &kp DLLR &kp LPRN &kp RPRN &kp ASTRK   &kp ASTRK  &kp N4  &kp N5  &kp N6 &kp PLUS
+   &kp HASH &kp DLLR &kp LPAR &kp RPAR &kp ASTRK   &kp ASTRK  &kp N4  &kp N5  &kp N6 &kp PLUS
    &kp PRCNT  &kp CARET &kp LBRC &kp RBRC &kp UNDER   &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp DOT
                   &trans  &trans  &kp CAPS   &tog SYMB  &kp RET  &kp N0
                         >;
@@ -126,7 +125,7 @@
                 nav_layer {
                         bindings = <
    &kp F1  &wkspcup  &winup  &kp wkspcdown  &kp F7   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS
-   &kp F2 &winleft &windown &winright &kp F8   &kp PG_DOWN  &kp LEFT  &hm RCTL DOWN  &hm RALT RIGHT &lock
+   &kp F2 &winleft &windown &winright &kp F8   &kp PG_DOWN  &kp LEFT  &hm RCTRL DOWN  &hm RALT RIGHT &lock
    &kp F3  &kp F4 &kp F5 &kp F6 &kp F9   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE
                   &kp F10  &kp F11  &kp F12   &tog NAV  &trans  &kp LGUI
                         >;
