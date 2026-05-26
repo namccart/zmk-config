@@ -12,8 +12,18 @@
 #define SYMB 1
 #define NAV 2
 
-&lt {
-    quick-tap-ms = <125>;
+
+/ {
+    behaviors {
+        lt_quick_tap: layer_tap_quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
 };
 
 / {
@@ -22,7 +32,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -106,7 +116,7 @@
    &trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &kp P &trans
    &trans &kp A &hm LALT S &hm LCTRL D &kp F &kp G   &kp H &kp J  &hm RCTRL K  &hm RALT L   &kp SEMI &trans
    &trans &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
-                  &lt SYMB DEL &kp TAB &lt NAV BKSP   &lt NAV SPACE &kp RET &lt SYMB ESC
+                  &lt SYMB DEL &kp TAB &lt_quick_tap NAV BKSP   &lt_quick_tap NAV SPACE &kp RET &lt SYMB ESC
                         >;
                 };
                 symb_layer {
