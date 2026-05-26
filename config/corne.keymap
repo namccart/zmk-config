@@ -101,8 +101,7 @@
         layer_lock: layer_lock_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &tog LAYER_NUMBER>;
+            bindings = <&to LAYER_NUMBER>;
         };
         lock: lock {
             compatible = "zmk,behavior-macro";
