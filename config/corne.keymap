@@ -148,7 +148,7 @@
                 };
                 mouse_layer {
                         bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &mcs SCRL_LEFT &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &msc SCRL_LEFT &trans &trans
    &trans &trans &trans &trans &trans &trans   &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
                   &to 0 &trans &trans   &mkp LCLK &mkp RCLK &mkp MCLK
