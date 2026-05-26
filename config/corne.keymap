@@ -101,7 +101,10 @@
         layer_lock: layer_lock_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1>, <&to LAYER_NUMBER>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &to LAYER_NUMBER>
+                ;
         };
         lock: lock {
             compatible = "zmk,behavior-macro";
@@ -149,7 +152,7 @@
    &trans &trans &trans &trans &trans &trans   &trans &kp F7 &kp F8 &kp F9 &kp F11 &trans
    &trans &trans &kp LALT &kp LCTRL &trans &trans   &trans &kp F4 &kp F5 &kp F6 &kp F12 &trans
    &trans &trans &trans &trans &trans &trans   &trans &kp F1 &kp F2 &kp F3 &trans &trans
-                  &trans &trans &trans   &trans &kp F10 &tog FUNC
+                  &to 0 &trans &trans   &trans &kp F10 &tog FUNC
                         >;
                 };
                 mouse_layer {
