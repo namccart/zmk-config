@@ -11,7 +11,8 @@
 #define BASE 0
 #define SYMB 1
 #define NAV 2
-
+#define MOUSE 3
+#define BT 4
 
 / {
     behaviors {
@@ -113,7 +114,7 @@
 
                 base_layer {
                         bindings = <
-   &trans &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &kp P &trans
+   &trans &lt_quick_tap MOUSE Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &lt_quick_tap BT P &trans
    &trans &kp A &hm LALT S &hm LCTRL D &kp F &kp G   &kp H &kp J  &hm RCTRL K  &hm RALT L   &kp SEMI &trans
    &trans &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
                   &lt SYMB DEL &kp TAB &lt_quick_tap NAV BKSP   &lt_quick_tap NAV SPACE &kp RET &lt SYMB ESC
@@ -124,7 +125,7 @@
    &trans &kp EXCL  &kp AT  &kp LBRC  &kp RBRC  &kp AMPS   &kp FSLH  &kp N7  &kp N8  &kp N9 &kp MINUS &trans
    &trans &kp HASH &kp DLLR &kp LPAR &kp RPAR &kp ASTRK   &kp ASTRK  &kp N4  &kp N5  &kp N6 &kp PLUS &trans
    &trans &kp PRCNT  &kp CARET &kp LBKT &kp RBKT &kp UNDER   &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp DOT &trans
-                  &kp CAPS  &trans  &trans   &kp RET &kp N0  &tog SYMB
+                  &kp CAPS  &trans  &trans   &kp RET &kp N0  &tog NAV
                         >;
                 };
 
@@ -133,7 +134,23 @@
    &trans &kp F1  &wkspcup  &winup  &wkspcdown  &kp F7   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS &trans
    &trans &kp F2 &winleft &windown &winright &kp F8   &kp PG_DN  &kp LEFT  &hm RCTRL DOWN  &hm RALT RIGHT &lock &trans
    &trans &kp F3  &kp F4 &kp F5 &kp F6 &kp F9   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
-                  &kp F10  &kp F11  &kp F12   &trans  &kp LGUI &tog NAV
+                  &kp F10  &kp F11  &kp F12   &trans  &kp LGUI &tog SYMB
+                        >;
+                };
+                mouse_layer {
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &mcs SCRL_LEFT &trans &trans
+   &trans &trans &trans &trans &trans &trans   &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
+   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                  &trans &trans &trans   &mkp LCLK &mkp RCLK &mkp MCLK
+                        >;
+                };
+                bt_layer {
+                        bindings = <
+   &trans &bt BT_CLR &trans &trans &bt BT_PRV &bt BT_NXT   &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                  &trans &trans &trans   &trans &trans &trans
                         >;
                 };
         };
