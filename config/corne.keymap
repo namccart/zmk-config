@@ -98,12 +98,11 @@
                 , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
-        layer_lock: layer_lock_macro {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+        layer_lock_2: layer_lock_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
-                = <&macro_param_1to1>
-                , <&macro_tap &to LAYER_NUMBER>
+                = <&to 0 &to 2>
                 ;
         };
         lock: lock {
@@ -143,7 +142,7 @@
                         bindings = <
    &trans &trans  &wkspcup  &winup  &wkspcdown  &trans   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS &trans
    &trans &to 1 &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
-   &trans &layer_lock 2 &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
+   &trans &layer_lock_2 &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
                   &to 0 &trans &trans   &trans  &kp LGUI &tog SYMB
                         >;
                 };
