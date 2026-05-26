@@ -12,6 +12,9 @@
 #define SYMB 1
 #define NAV 2
 
+&lt {
+    quick-tap-ms = <125>;
+};
 
 / {
     behaviors {
