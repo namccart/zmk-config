@@ -98,13 +98,6 @@
                 , <&macro_release &kp RCTRL &kp RALT>
                 ;
         };
-        layer_lock_2: layer_lock_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 0 &to 2>
-                ;
-        };
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -123,9 +116,9 @@
 
                 base_layer {
                         bindings = <
-   &trans &lt_quick_tap MOUSE Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &lt_quick_tap BT P &trans
+   &trans &lt_quick_tap MOUSE Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &kp P &trans
    &trans &kp A &hm LALT S &hm LCTRL D &kp F &kp G   &kp H &kp J  &hm RCTRL K  &hm RALT L   &kp SEMI &trans
-   &trans &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
+   &trans &mt LSHFT Z &lt_quick_tap BT X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
                   &lt SYMB DEL &kp TAB &lt_quick_tap NAV BKSP   &lt_quick_tap NAV SPACE &kp RET &lt SYMB ESC
                         >;
                 };
@@ -141,8 +134,8 @@
                 nav_layer {
                         bindings = <
    &trans &trans  &wkspcup  &winup  &wkspcdown  &trans   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS &trans
-   &trans &to 1 &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
-   &trans &layer_lock_2 &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
+   &trans &to SYMB &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
+   &trans &to NAV &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
                   &to 0 &trans &trans   &trans  &kp LGUI &tog SYMB
                         >;
                 };
@@ -164,7 +157,7 @@
                 };
                 bt_layer {
                         bindings = <
-   &trans &bt BT_CLR &trans &trans &bt BT_PRV &bt BT_NXT   &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans &bt BT_PRV &bt BT_NXT &trans &BT_CLR &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
                   &to 0 &trans &trans   &trans &trans &trans
