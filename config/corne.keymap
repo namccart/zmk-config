@@ -9,6 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #define BASE 0
 #define SYMB 1
 #define NAV 2
@@ -131,7 +134,7 @@
                 nav_layer {
                         display-name = "nav";
                         bindings = <
-   &trans &caps_word  &wkspcup  &winup  &wkspcdown  &trans   &kp PG_UP  &kp HOME  &kp UP  &kp END &kp INS &trans
+   &trans &caps_word  &wkspcup  &winup  &wkspcdown  &trans   &kp HOME  &kp PG_UP  &kp UP  &kp END &kp INS &trans
    &trans &tog SYMB &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
 
    &trans &tog NAV &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
@@ -153,8 +156,8 @@
    &trans &trans &trans &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &msc SCRL_LEFT &trans &trans
    &trans &trans &trans &trans &trans &trans   &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                  &to 0 &trans &trans   &mkp LCLK &mkp RCLK &mkp MCLK
-                        >;
+                  &to 0 &trans &trans   &mkp MCLK &mkp LCLK &mkp RCLK
+                         >;
                 };
                 bt_layer {
                         display-name = "bt";
