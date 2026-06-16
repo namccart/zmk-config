@@ -117,7 +117,7 @@
                         bindings = <
    &trans &lt_quick_tap MOUSE Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I  &kp O  &kp P &trans
    &trans &kp A &hm LALT S &hm LCTRL D &kp F &kp G   &kp H &kp J  &hm RCTRL K  &hm RALT L   &kp SEMI &trans
-   &trans &mt LSHFT Z &lt_quick_tap BT X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
+   &trans &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &trans
                   &lt SYMB DEL &kp TAB &lt_quick_tap NAV BKSP   &lt_quick_tap NAV SPACE &kp RET &lt SYMB ESC
                         >;
                 };
@@ -135,7 +135,7 @@
                         display-name = "nav";
                         bindings = <
    &trans &caps_word  &wkspcup  &winup  &wkspcdown  &trans   &kp HOME  &kp PG_UP  &kp UP  &kp END &kp INS &trans
-   &trans &tog SYMB &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
+!  &trans &tog SYMB &winleft &windown &winright &trans   &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT &lock &trans
 
    &trans &tog NAV &trans &trans &trans &trans   &kp MINUS  &kp DQT  &kp SQT  &kp BSLH  &kp GRAVE &trans
                   &to 0 &trans &trans   &trans  &kp LGUI &trans
@@ -153,7 +153,7 @@
                 mouse_layer {
                         display-name = "mouse";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &msc SCRL_LEFT &trans &trans
+   &trans &trans &mo BT &trans &trans &trans   &trans &msc SCRL_UP &mmv MOVE_UP &msc SCRL_LEFT &trans &trans
    &trans &trans &trans &trans &trans &trans   &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
                   &to 0 &trans &trans   &mkp MCLK &mkp LCLK &mkp RCLK
